@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="/ASSETS/css/style.css">
+    <script src="/ASSETS/js/Honey.js" defer></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <img src="/Images/logo.jpg" alt="logo">
+         <strong><h1><i>In The Zone</i></h1></strong> <!-- Add a name for player -->
+        
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/01_Index.html">HOME</a></li>
+            <li><a href="/03_Contact.html">Contact</a></li>
+            <li><a href="/02_Form2.html">Feedback</a></li>
+        </ul>
+    </nav>
+   <div class="player">
+       <div class="wrapper">
+           <div class="details">
+               <div class="now-playing">PLAYING x OF y</div>
+
+               <div class="track-art">
+                <img id="track-image" src="" alt="track art">
+               </div>
+               
+               <div class="track-name">Track Name</div>
+               <div class="track-artist">Track Artist</div>
+           </div>
+
+           <div class="slider_container">
+               <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+           </div>
+
+           <div class="slider_container">
+               <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+           </div>
+
+           <div class="buttons">
+               <div class="random-track" onclick="randomTrack()">
+                   <i class="fas fa-random fa-2x" title="random"></i>
+               </div>
+               <div class="prev-track" onclick="prevTrack()">
+                    <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+                <div class="playpause-track" onclick="playpauseTrack()">
+                    <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                    <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+                <div class="repeat-track" onclick="repeatTrack()">
+                    <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                </div>
+           </div>
+
+            <div id="wave">
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+            </div>  
+       </div>
+   </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yo Yo Honey  Singh</title>
+
+        <link rel="stylesheet" href="Styles.css">
+        <script src="Honey.js"></script>
+    <style>
+        .container{
+          
+          align-items: center; /* center vertically */
+          height: auto; /* set the body height to 100% of the viewport */
+          margin: auto; /* remove default margin */
+          background-size: cover; /* cover the entire background */
+          background-position: center; /* center the background image */
+          background-image: url('Images/Honey/Background.jpg') ;
+        }
+        
+        .progress {
+            margin: 20px 0; /* Margin for spacing */
+        }
+        
+        input[type="range"] {
+            width: 100%; /* Full width for the progress bar */
+            cursor: pointer; /* Pointer cursor on hover */
+            background: #4d4d4d; /* Background for the range input */
+            border-radius: 5px; /* Rounded corners */
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none; /* Remove default styling */
+            appearance: none; /* Remove default styling */
+            width: 15px; /* Width of the thumb */
+            height: 15px; /* Height of the thumb */
+            border-radius: 50%; /* Circular thumb */
+            background: #28a745; /* Green color for the thumb */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+        
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background: #218838; /* Darker green on hover */
+        }
+    </style>
+        
+    </head>
+       
+<body>
+        <header>
+            <img src="" alt="logo">
+             <strong><h1>In The Zone</h1></strong>  Add a name for player 
+            
+        </header>
+        <nav>
+            <ul>
+                <li><strong><a href="01_Index.html">HOME</li></a></strong>
+                <li><strong><a href="03_Contact.html">Contact</strong></a></li>
+                <li><strong><a href="02_Form2.html">Feedback</strong></a></li>
+            </ul>
+        </nav>
+        
+        
+    <div class="container">
+        <div class="songList">
+            <h1>Best of Honey Singh</h1>
+            <div class="songItemContainer">
+                
+                <div class="songItem">
+                    <img src="Images/Honey/Blue Eyes.jpg">
+                    <span class="songName">Blue Eyes</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="0" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Millionaire</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="1" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Angrezi Beat </span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="2" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Dope Shope</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="3" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Love Dose</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="4" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Desi Kalakar</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="5" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Brown Rang</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="6" class="far songItemPlay fa-play-circle"></i> </span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+<div class="Player"> 
+        <div class="player">
+            <div class="cover">
+                <img src="" alt="Album Cover">
+            </div>
+             <div class="info"> 
+                <h2 id="song-title">Song Title</h2>
+                <h3 id="artist">Artist Name</h3>
+            </div>
+            <div class="controls">
+                <button id="prevBtn">&#9664;</button>
+                <button id="playPauseBtn">&#9654;</button>
+                <button id="nextBtn">&#9654;&#9654;</button>
+            </div>
+            <div class="progress">
+                <input type="range" id="progressBar" value="0" min="0" max="100">
+            </div>
+    </div>
+    <audio id="audioplayer" src=""></audio>
+ 
+
+
+ <div class="Player"> 
+    <div class="player">
+        <div class="cover">
+            <img src="" alt="Album Cover">
+        </div>
+        <div class="info"> 
+            <h2 id="song-title">Song Title</h2>
+            <h3 id="artist">Artist Name</h3>
+        </div>
+        <div class="controls">
+            <button id="prevBtn">&#9664;</button>
+            <button id="playPauseBtn">&#9654;</button>
+            <button id="nextBtn">&#9654;&#9654;</button>
+            <button id="shuffleBtn">&#x2943;</button>
+            <button id="repeatBtn">&#x21ba;</button> 
+        </div>
+        <div class="progress">
+            <input type="range" id="progressBar" value="0" min="0" max="100">
+        </div>
+    </div>
+</div>
+<script src="Honey.js"></script>    
+</body>
+</html> -->
