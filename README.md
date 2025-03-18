@@ -1,5 +1,5 @@
 
-##Music Player
+## Music Player
 
 Welcome to the Music Player project! This project is a web-based music player that allows users to play, pause, and navigate through a collection of songs. The player also supports features like volume control, seek functionality, and random track playback.
 
