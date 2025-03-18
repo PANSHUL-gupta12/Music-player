@@ -10,7 +10,7 @@ Welcome to the Music Player project! This project is a web-based music player th
 - Installation
 - Usage
 - Contributing
-- License
+
 
 ## Features
 
