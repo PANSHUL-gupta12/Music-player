@@ -1,0 +1,60 @@
+/* ============================================
+   IN THE ZONE — Motion Design System
+   ============================================ */
+
+/* Global Page Entry */
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Staggered Element Reveal */
+@keyframes revealUp {
+  0% { transform: translateY(40px); opacity: 0; filter: blur(5px); }
+  100% { transform: translateY(0); opacity: 1; filter: blur(0); }
+}
+
+@keyframes revealDown {
+  0% { transform: translateY(-40px); opacity: 0; filter: blur(5px); }
+  100% { transform: translateY(0); opacity: 1; filter: blur(0); }
+}
+
+/* Float & Hover Micro-interactions */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { 
+    box-shadow: 0 0 10px var(--accent-glow);
+    filter: brightness(1);
+  }
+  50% { 
+    box-shadow: 0 0 25px var(--accent-glow);
+    filter: brightness(1.2);
+  }
+}
+
+/* Scale & Pop */
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Utility classes */
+.anim-fade-in { animation: fadeInPage 1s cubic-bezier(0.2, 0, 0.2, 1) forwards; }
+.anim-reveal-up { animation: revealUp 0.8s cubic-bezier(0.2, 0, 0.2, 1) forwards; }
+.anim-reveal-down { animation: revealDown 0.8s cubic-bezier(0.2, 0, 0.2, 1) forwards; }
+.anim-float { animation: float 4s ease-in-out infinite; }
+.anim-glow { animation: glowPulse 2s infinite; }
+.anim-scale { animation: scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
+/* Stagger Helpers */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+.stagger-7 { animation-delay: 0.7s; }

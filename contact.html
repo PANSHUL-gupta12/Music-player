@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the In The Zone music player team — reach out to the developer, customer care, or music specialist.">
+    <title>Contact — In The Zone</title>
+    <link rel="stylesheet" href="ASSETS/css/Styles.css">
+    <link rel="stylesheet" href="ASSETS/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-brand">
+            <a href="index.html">
+                <img src="Images/logo.jpg" alt="In The Zone Logo" class="brand-logo">
+            </a>
+            <span class="site-title">In The Zone</span>
+        </div>
+        <ul>
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="contact.html" id="nav-contact">Contact</a></li>
+            <li><a href="feedback.html" id="nav-feedback">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <div id="Contact">
+        <h2>Contact Us</h2>
+        <p>Reach out to our team through any of the following channels:</p>
+
+        <h3>Developer — Panshul Gupta</h3>
+        <ul>
+            <li><b>Phone:</b> +91 9056583717</li>
+            <li><b>Email:</b> <a href="mailto:panshulgupta0209@gmail.com">panshulgupta0209@gmail.com</a></li>
+            <li><b>Instagram:</b> <a href="https://www.instagram.com/panshul_gupta03/" target="_blank" rel="noopener">@panshul_gupta03</a></li>
+            <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/panshul-gupta-862373324/" target="_blank" rel="noopener">Panshul Gupta</a></li>
+        </ul>
+
+        <h3>Customer Care — Shivansh</h3>
+        <ul>
+            <li><b>Phone:</b> +91 7986936500</li>
+            <li><b>Email:</b> <a href="mailto:Shivansh2006sharma@gmail.com">Shivansh2006sharma@gmail.com</a></li>
+            <li><b>Instagram:</b> <a href="https://www.instagram.com/shivansh.093___/" target="_blank" rel="noopener">@shivansh.093___</a></li>
+        </ul>
+
+        <h3>Music Specialist — Namit Dhiman</h3>
+        <ul>
+            <li><b>Phone:</b> +91 9501121452</li>
+            <li><b>Email:</b> <a href="mailto:namit1081.namit@gmail.com">namit1081.namit@gmail.com</a></li>
+            <li><b>Instagram:</b> <a href="https://www.instagram.com/grimy_x/" target="_blank" rel="noopener">@grimy_x</a></li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        Made with ❤️ by Panshul Gupta · In The Zone
+    </div>
+
+    <!-- Floating Playlist Button -->
+    <button id="playlistBtn" class="floating-playlist-btn" title="My Playlist">
+        <i class="fa fa-music"></i>
+    </button>
+
+    <div id="playlistPanel" class="playlist-panel">
+        <div class="playlist-content">
+            <div class="playlist-header">
+                <h3>My Playlist</h3>
+                <button id="closePlaylist" class="close-btn"><i class="fa fa-xmark"></i></button>
+            </div>
+            <label class="file-upload-label" for="fileInput">
+                <i class="fa fa-plus"></i> Add Songs from Device
+            </label>
+            <input type="file" id="fileInput" accept="audio/*" multiple style="display:none;">
+            <ul id="playlist"></ul>
+        </div>
+    </div>
+
+    <script src="ASSETS/js/playlist.js" defer></script>
+</body>
+</html>

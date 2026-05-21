@@ -1,0 +1,12 @@
+{
+  "name": "music-player",
+  "version": "1.0.0",
+  "description": "Premium Music Player with Spotify Integration",
+  "main": "index.html",
+  "scripts": {
+    "build": "node generate-config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

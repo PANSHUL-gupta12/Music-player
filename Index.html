@@ -3,56 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music-Player</title>
-    <link rel="stylesheet" href="/ASSETS/css/Styles.css">
+    <meta name="description" content="In The Zone — Your favorite artists, all in one music player. Browse playlists from Honey Singh, Karan Aujla, Shubh, Sidhu Moosewala, and more.">
+    <title>In The Zone — Music Player</title>
+    <link rel="stylesheet" href="ASSETS/css/Styles.css">
+    <link rel="stylesheet" href="ASSETS/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <img src="Images/logo.jpg" alt="logo">
-         <strong><h1><i>In The Zone</i></h1></strong> <!-- Add a name for player -->
-        
-    </header>
+
     <nav>
+        <div class="nav-brand">
+            <a href="index.html">
+                <img src="Images/logo.jpg" alt="In The Zone Logo" class="brand-logo">
+            </a>
+            <span class="site-title">In The Zone</span>
+        </div>
         <ul>
-            <li><a href="#Home">HOME</a></li>
-            <li><a href="00_Login.html">Login</a></li>
-            <li><a href="03_Contact.html">Contact</a></li>
-            <li><a href="02_Form2.html">Feedback</a></li>
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="contact.html" id="nav-contact">Contact</a></li>
+            <li><a href="feedback.html" id="nav-feedback">Feedback</a></li>
         </ul>
     </nav>
-   <center><h2 color="white">All Artist's Playlist</h2></center>
+
+    <h2 class="page-title">All Artist Playlists</h2>
+
     <div class="Playlist">
-        
-            <div id="Sing1">
-                <a href="ASSETS/SHTML/Honey.html"><!-- Add singers file--> <img src="Images/Coverpage.jpg" alt="Yo Yo Honey Singh"><i><h4> Yo Yo  Honey Singh </h4></i></a>
-            </div>
+        <div id="Sing1" style="--i:0">
+            <a href="ASSETS/SHTML/Honey.html">
+                <img src="Images/coverpage.jpg" alt="Yo Yo Honey Singh">
+                <h4>Yo Yo Honey Singh</h4>
+            </a>
+        </div>
 
-            <div id="Sing2">
-                <a href="ASSETS/SHTML/Karan.html"><!-- Add singers file-->    <img src="Images/karan2.jpg" alt="Karan  Aujla"><h4><i>Karan  Aujla</i></h4></a>
-            </div>
+        <div id="Sing2" style="--i:1">
+            <a href="ASSETS/SHTML/Karan.html">
+                <img src="Images/karan2.jpg" alt="Karan Aujla">
+                <h4>Karan Aujla</h4>
+            </a>
+        </div>
 
-            <div id ="Sing3">
-                <a href="ASSETS/SHTML/Shubh.html"><!-- Add singers file--> <img src="Images/Shubh2.jpg" alt="Shubh"><h4><i>Shubh</i></h4></a>
-            </div>
+        <div id="Sing3" style="--i:2">
+            <a href="ASSETS/SHTML/Shubh.html">
+                <img src="Images/Shubh2.jpg" alt="Shubh">
+                <h4>Shubh</h4>
+            </a>
+        </div>
 
-            <div id="Sing4">
-                <a href="ASSETS/SHTML/Sidhu.html"><!-- Add singers file--> <img src="Images/sidhu3.jpg" alt="Sidhu Moosewala"><h4><i>Sidhu  Moosewala</i></h4></a>
-            </div>
+        <div id="Sing4" style="--i:3">
+            <a href="ASSETS/SHTML/Sidhu.html">
+                <img src="Images/sidhu3.jpg" alt="Sidhu Moosewala">
+                <h4>Sidhu Moosewala</h4>
+            </a>
+        </div>
 
-            <div id="Sing5">
-                <a href="ASSETS/SHTML/Tal.html"><!-- Add singers file--> <img src="Images/Talwinder1.jpg" alt="Talwinder"><h4><i>Talwiinder</i></h4></a>
-            </div>
+        <div id="Sing5" style="--i:4">
+            <a href="ASSETS/SHTML/Tal.html">
+                <img src="Images/Talwinder1.jpg" alt="Talwiinder">
+                <h4>Talwiinder</h4>
+            </a>
+        </div>
 
-            <div id="Sing6">
-                <a href="ASSETS/SHTML/Alan.html"><!-- Add singers file--> <img src="Images/Alan2.jpg" alt="Alan Walker"><h4><i>Alan Walker</i></h4></a>
-            </div>
+        <div id="Sing6" style="--i:5">
+            <a href="ASSETS/SHTML/Alan.html">
+                <img src="Images/Alan2.jpg" alt="Alan Walker">
+                <h4>Alan Walker</h4>
+            </a>
+        </div>
 
-            <div id="Sing7">
-                <a href="ASSETS/SHTML/Weekend.html"><!-- Add singers file--> <img src="Images/weekend2.jpg" alt="The Weekend"><h4><i>The Weekend</i></h4></a>
-            </div>
+        <div id="Sing7" style="--i:6">
+            <a href="ASSETS/SHTML/Weekend.html">
+                <img src="Images/weekend2.jpg" alt="The Weeknd">
+                <h4>The Weeknd</h4>
+            </a>
+        </div>
     </div>
 
-    
+    <div class="footer">
+        Made with ❤️ by Panshul Gupta · In The Zone
+    </div>
 
+    <!-- Floating Playlist Button -->
+    <button id="playlistBtn" class="floating-playlist-btn" title="My Playlist">
+        <i class="fa fa-music"></i>
+    </button>
+
+    <!-- Playlist Panel -->
+    <div id="playlistPanel" class="playlist-panel">
+        <div class="playlist-content">
+            <div class="playlist-header">
+                <h3>My Playlist</h3>
+                <button id="closePlaylist" class="close-btn"><i class="fa fa-xmark"></i></button>
+            </div>
+            <label class="file-upload-label" for="fileInput">
+                <i class="fa fa-plus"></i> Add Songs from Device
+            </label>
+            <input type="file" id="fileInput" accept="audio/*" multiple style="display:none;">
+            <ul id="playlist"></ul>
+        </div>
+    </div>
+
+    <script src="ASSETS/js/playlist.js" defer></script>
 </body>
 </html>

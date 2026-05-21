@@ -1,0 +1,13 @@
+# Environment / Credentials
+ASSETS/js/config.js
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dist
+.dist/
